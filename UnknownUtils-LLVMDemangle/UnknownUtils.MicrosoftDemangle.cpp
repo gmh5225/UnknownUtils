@@ -16,13 +16,13 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "Demangle/MicrosoftDemangle.h"
-#include "Demangle/Demangle.h"
-#include "Demangle/MicrosoftDemangleNodes.h"
+#include "unknown/Demangle/MicrosoftDemangle.h"
+#include "unknown/Demangle/Demangle.h"
+#include "unknown/Demangle/MicrosoftDemangleNodes.h"
 
-#include "Demangle/DemangleConfig.h"
-#include "Demangle/StringView.h"
-#include "Demangle/Utility.h"
+#include "unknown/Demangle/DemangleConfig.h"
+#include "unknown/Demangle/StringView.h"
+#include "unknown/Demangle/Utility.h"
 
 #include <array>
 #include <cctype>

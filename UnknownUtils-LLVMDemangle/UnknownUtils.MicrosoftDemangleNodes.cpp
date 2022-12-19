@@ -13,9 +13,9 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "Demangle/MicrosoftDemangleNodes.h"
-#include "Demangle/DemangleConfig.h"
-#include "Demangle/Utility.h"
+#include "unknown/Demangle/MicrosoftDemangleNodes.h"
+#include "unknown/Demangle/DemangleConfig.h"
+#include "unknown/Demangle/Utility.h"
 #include <cctype>
 #include <string>
 

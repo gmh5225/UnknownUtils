@@ -13,9 +13,9 @@
 // file does not yet support:
 //   - C++ modules TS
 
-#include "Demangle/Demangle.h"
-#include "Demangle/ItaniumDemangle.h"
-#include "Demangle/Allocator.h"
+#include "unknown/Demangle/Demangle.h"
+#include "unknown/Demangle/ItaniumDemangle.h"
+#include "unknown/Demangle/Allocator.h"
 
 #include <cassert>
 #include <cctype>
