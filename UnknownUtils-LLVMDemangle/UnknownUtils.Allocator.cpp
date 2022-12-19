@@ -3,8 +3,8 @@
 // RetDec: This file was taken from LLVM commit: 438784aaf3397778212bd41bf5333f86e04b4814.
 //
 
-#include "Demangle/Allocator.h"
-#include "Demangle/ItaniumDemangle.h"
+#include "unknown/Demangle/Allocator.h"
+#include "unknown/Demangle/ItaniumDemangle.h"
 
 namespace unknown {
 namespace itanium_demangle {

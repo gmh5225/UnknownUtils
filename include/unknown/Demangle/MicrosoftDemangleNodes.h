@@ -13,11 +13,10 @@
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef LLVM_SUPPORT_MICROSOFTDEMANGLENODES_H
-#define LLVM_SUPPORT_MICROSOFTDEMANGLENODES_H
+#pragma once
 
-#include "Demangle/DemangleConfig.h"
-#include "Demangle/StringView.h"
+#include "unknown/Demangle/DemangleConfig.h"
+#include "unknown/Demangle/StringView.h"
 #include <array>
 // retdec {
 // fix gcc 10 compilation: https://bugs.gentoo.org/708730
@@ -30,7 +29,7 @@ namespace unknown {
 namespace itanium_demangle {
 class OutputStream;
 }
-} // namespace llvm
+} // namespace unknown
 
 using unknown::itanium_demangle::OutputStream;
 using unknown::itanium_demangle::StringView;
@@ -688,6 +687,4 @@ struct FunctionSymbolNode : public SymbolNode
 };
 
 } // namespace ms_demangle
-} // namespace llvm
-
-#endif
+} // namespace unknown
