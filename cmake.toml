@@ -6,4 +6,9 @@ name = "UnknownUtils"
 msvc-runtime = "static"
 languages = ["CXX"]
 
-[subdir.UnknownUtils-LLVMDemangle]
+[target.UnknownUtils-LLVMDemangle]
+type = "library"
+include-directories = ["include"]
+headers = ["include/unknown/Demangle/*.h"]
+sources = ["UnknownUtils-LLVMDemangle/*.cpp", "UnknownUtils-LLVMDemangle/*.hpp", "UnknownUtils-LLVMDemangle/*.h"]
+compile-features = ["cxx_std_20"]

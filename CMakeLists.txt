@@ -33,13 +33,35 @@ project(UnknownUtils
 		CXX
 )
 
-# Subdirectory: UnknownUtils-LLVMDemangle
-set(CMKR_CMAKE_FOLDER ${CMAKE_FOLDER})
-if(CMAKE_FOLDER)
-	set(CMAKE_FOLDER "${CMAKE_FOLDER}/UnknownUtils-LLVMDemangle")
-else()
-	set(CMAKE_FOLDER UnknownUtils-LLVMDemangle)
-endif()
-add_subdirectory(UnknownUtils-LLVMDemangle)
-set(CMAKE_FOLDER ${CMKR_CMAKE_FOLDER})
+# Target: UnknownUtils-LLVMDemangle
+set(UnknownUtils-LLVMDemangle_SOURCES
+	"UnknownUtils-LLVMDemangle/UnknownUtils.Allocator.cpp"
+	"UnknownUtils-LLVMDemangle/UnknownUtils.Demangle.cpp"
+	"UnknownUtils-LLVMDemangle/UnknownUtils.ItaniumDemangle.cpp"
+	"UnknownUtils-LLVMDemangle/UnknownUtils.MicrosoftDemangle.cpp"
+	"UnknownUtils-LLVMDemangle/UnknownUtils.MicrosoftDemangleNodes.cpp"
+	"include/unknown/Demangle/Allocator.h"
+	"include/unknown/Demangle/Compiler.h"
+	"include/unknown/Demangle/Demangle.h"
+	"include/unknown/Demangle/DemangleConfig.h"
+	"include/unknown/Demangle/ItaniumDemangle.h"
+	"include/unknown/Demangle/MicrosoftDemangle.h"
+	"include/unknown/Demangle/MicrosoftDemangleNodes.h"
+	"include/unknown/Demangle/StringView.h"
+	"include/unknown/Demangle/Utility.h"
+	cmake.toml
+)
+
+add_library(UnknownUtils-LLVMDemangle)
+
+target_sources(UnknownUtils-LLVMDemangle PRIVATE ${UnknownUtils-LLVMDemangle_SOURCES})
+source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${UnknownUtils-LLVMDemangle_SOURCES})
+
+target_compile_features(UnknownUtils-LLVMDemangle PUBLIC
+	cxx_std_20
+)
+
+target_include_directories(UnknownUtils-LLVMDemangle PUBLIC
+	include
+)
 
