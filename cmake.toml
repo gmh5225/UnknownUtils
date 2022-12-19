@@ -12,3 +12,13 @@ include-directories = ["include"]
 headers = ["include/unknown/Demangle/*.h"]
 sources = ["UnknownUtils-LLVMDemangle/*.cpp", "UnknownUtils-LLVMDemangle/*.hpp", "UnknownUtils-LLVMDemangle/*.h"]
 compile-features = ["cxx_std_20"]
+
+
+[target.UnknownUtils-LLVMSupport]
+type = "library"
+include-directories = ["include"]
+headers = ["include/unknown/Support/**.h"]
+sources = ["UnknownUtils-LLVMSupport/*.cpp", "UnknownUtils-LLVMSupport/*.hpp", "UnknownUtils-LLVMSupport/*.h"]
+compile-features = ["cxx_std_20"]
+link-libraries = ["UnknownUtils-LLVMDemangle"]
+
